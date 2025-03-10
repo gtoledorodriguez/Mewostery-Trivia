@@ -27,38 +27,23 @@
       </div>
 
       <div class="container-title">
-      <p>Pick a category and difficulty. Leave as "any" to get a trivia question of random category and/or difficulty.</p>
+        <p class="text-lg"><%= @question %></p>
       </div>
 
       <div id="home" class="container-title">
-        <form action="/trivia">
-          <div class="text-lg">
-            <label for="category">
-              Category:
-            </label>
-            <select class="text-sm" name="category" id="category">
+        <form action="/solve">
+          <div class="text-md">
 
-              <% @category.each do |a_category| %>
-                <option value="<%= a_category.fetch("id") %>"><%= a_category.fetch("name") %></option>
-              <% end %>
-
-            </select>
+            <% @answers.each do |a_answer| %>
+              <input type="radio" id="<%= a_answer %>" name="answer" value="<%= a_answer %>">
+              <label for="<%= a_answer %>"><%= a_answer %></label> <br>
+            <% end %>
+            <input type="hidden" id="correct_answer" name="correct_answer" value="<%= @correct_answer %>">
           </div>
-          <div class="text-lg">
-            <label for="difficulty">
-              Difficulty:
-            </label>
-            <select class="text-sm" name="difficulty" id="difficulty">
 
-              <% @difficulty.each do |a_difficulty| %>
-                <option value="<%= a_difficulty %>"><%= a_difficulty %></option>
-              <% end %>
-
-            </select>
-          </div>
           <div class="container-title">
             <button class="button text-sm">
-              Start
+              Solve!
             </button>
           </div>
         </form>

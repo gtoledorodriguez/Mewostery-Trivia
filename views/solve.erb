@@ -31,37 +31,7 @@
       </div>
 
       <div id="home" class="container-title">
-        <form action="/trivia">
-          <div class="text-lg">
-            <label for="category">
-              Category:
-            </label>
-            <select class="text-sm" name="category" id="category">
-
-              <% @category.each do |a_category| %>
-                <option value="<%= a_category.fetch("id") %>"><%= a_category.fetch("name") %></option>
-              <% end %>
-
-            </select>
-          </div>
-          <div class="text-lg">
-            <label for="difficulty">
-              Difficulty:
-            </label>
-            <select class="text-sm" name="difficulty" id="difficulty">
-
-              <% @difficulty.each do |a_difficulty| %>
-                <option value="<%= a_difficulty %>"><%= a_difficulty %></option>
-              <% end %>
-
-            </select>
-          </div>
-          <div class="container-title">
-            <button class="button text-sm">
-              Start
-            </button>
-          </div>
-        </form>
+        
       </div>
     </body>
   </html>
