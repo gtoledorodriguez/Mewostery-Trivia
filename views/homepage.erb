@@ -1,0 +1,55 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Link in Bio | Vivi Ramos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/icons/favicon.svg" type="image/svg+xml"/>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="scrollContainer">
+
+      <div class="container-title">
+        <h1 class="text-xl">Meowstery Trivia</h1>
+      </div>
+
+      <div id="home" class="container-title">
+        <div class="cat-pc">
+          <img class="cat-pc" src=" <%= @cataas_url %> " alt="A random cat"/>
+        </div>
+      </div>
+
+      <div id="home" class="container-title">
+        <form action="/trivia">
+          <div class="text-lg">
+            <label for="category">
+              Category:
+            </label>
+            <select class="text-sm" name="category" id="category">
+              <option value="volvo">Any Category</option>
+            </select>
+          </div>
+          <div class="text-lg">
+            <label for="difficulty">
+              Difficulty:
+            </label>
+            <select class="text-sm" name="difficulty" id="difficulty">
+              <option value="volvo">Volvo</option>
+            </select>
+          </div>
+          <div class="container-title">
+            <button class="button text-sm">
+              Start
+            </button>
+          </div>
+        </form>
+      </div>
+    </body>
+  </html>
